@@ -11,7 +11,10 @@ Rails.application.configure do
 
   # Show full error reports.
   config.consider_all_requests_local = true
-
+  # ngrokによる外部サーバーとの接続
+  config.hosts = ["6904-2001-268-c080-aadc-68d2-5778-3977-43c4.ngrok.io", "localhost"]
+  # ホワイトリスト
+  config.web_console.whitelisted_ips = '147.92.149.168'
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
